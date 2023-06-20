@@ -16,7 +16,7 @@
                         data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6=""
                         data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
                         <!-- MAIN IMAGE -->
-                        <img src="{{ url('public/web') }}/assets/images/6.webp" alt=""
+                        <img src="{{ url('public/web') }}/assets/images/d.jpg" alt=""
                             data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat"
                             data-bgparallax="10" class="rev-slidebg" data-no-retina>
                         <!-- LAYERS -->
@@ -24,9 +24,10 @@
                         <!-- LAYER NR. 1 -->
                         <div class="hero-text-wrap">
                             <center>
-                                <h3 style="color: white; font-weight:10px; margin-top:45vh"></h3>
-                                <img src="{{ url('public/web') }}/assets/images/kku-white.png" alt=""
-                                    style="width:50%; height:auto; object-fit: cover; ">
+                                <h3 style="color: white; font-weight:10px; margin-top:30vh"></h3>
+                                {{-- <img src="{{ url('public/web') }}/assets/images/logo-putih.png" alt=""
+                                    style="width:50%; height:auto; object-fit: cover; "> --}}
+                                    <img  src="{{ url('public/web') }}/assets/images/tiga.png" style="width:70%; height:auto; object-fit: cover;" alt="">
                             </center>
                         </div>
 
@@ -42,7 +43,7 @@
         <div class="container">
             <div class="section-title wow fadeInUp text-center" data-wow-delay="0.1s">
                 <strong style="font-size: 20px; font-weight:bold; color:grey"> {{$kategori_fasilitas->nama}} Di Kabupaten
-                    Kayong Utara
+                    Ketapang
                 </strong>
                 <hr class="center_line grey-bg">
             </div>
@@ -54,10 +55,14 @@
                                 <div class="item">
                                     <img class="img-responsive" style="width:100% ; height:200px; object-fit: cover"
                                         src="{{ url("public/$fasilitas->foto") }}" alt="" />
+                                    </div>
                                 </div>
-                            </div>
+                                <div class="post-text">
+                                    <a href="{{ url("fasilitas-wisata/$fasilitas->id") }}">{{ $fasilitas->nama }}</a>
+                                    <p style="color: #f9d402;">{{$fasilitas->rating}}</p>
+                                </div>
                             <div class="post-text">
-                                <a href="{{ url("fasilitas-wisata/$fasilitas->id") }}">{{ $fasilitas->nama }}</a>
+                                <p>{{$fasilitas->alamat}}</p>
                             </div>
                             <hr class="grey-bg">
                         </div>

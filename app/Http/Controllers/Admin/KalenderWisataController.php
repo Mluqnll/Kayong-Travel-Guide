@@ -73,7 +73,7 @@ class KalenderWisataController extends Controller
         $kalender_wisata->tanggal = request('tanggal');
         $kalender_wisata->id_bulan = request('id_bulan');
         $kalender_wisata->sumber_foto = request('sumber_foto');
-        $kalender_wisata->handleUploadFoto();
+        if (request('foto')) $kalender_wisata->handleUploadFoto();
         $kalender_wisata->save();
 
         return redirect('admin/kalender-wisata')->with('primary', 'Data Berhasil Diedit');
@@ -82,7 +82,9 @@ class KalenderWisataController extends Controller
 
     public function destroy($kalender_wisata)
     {
-        KalenderWisata::destroy($kalender_wisata);
+        $kalender_wisata = KalenderWisata::find($kalender_wisata);
+        $kalender_wisata->handleDelete();
+        $kalender_wisata->delete();
 
         return back()->with('danger', 'Data Berhasil Dihapus');
     }
