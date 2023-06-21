@@ -10,7 +10,7 @@
         content="Professional and Great template with 10 unique home page designs for corporate, classic, creative, parallax, studio, crypto Currency, business and minimal concept">
     <meta name="keywords"
         content="animation, creative, digital, flex, marketing, minimal, one page, parallax, portfolio, responsive, revolution slider, startup, studio, video background">
-    <title>EXPLORE KAYONG UTARA</title>
+    <title>EKSPLORE KAYONG UTARA</title>
     <link rel="shortcut icon" href="">
 
     <!-- Core Style Sheets -->

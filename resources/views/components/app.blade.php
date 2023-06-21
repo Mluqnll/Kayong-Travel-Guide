@@ -4,7 +4,7 @@
 
     <head>
         <meta charset="utf-8" />
-        <title>EKU - Explore Kayong Utara</title>
+        <title>EKU - Ekslore Kayong Utara</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
         <meta content="" name="author" />
