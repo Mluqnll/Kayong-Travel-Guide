@@ -8,7 +8,7 @@ use App\Models\KategoriFasilitas;
 
 class Fasilitas extends Model
 {
-    protected $table="fasilitas";
+    protected $table = "fasilitas";
 
     public function KategoriFasilitas()
     {
@@ -22,10 +22,9 @@ class Fasilitas extends Model
             $foto = request()->file('foto');
             $destination = "Fasilitas";
             $randomStr = Str::random(5);
-            $filename = time() . "-"  . $randomStr . "."  . $foto->extension();
+            $filename = time() . "-" . $randomStr . "." . $foto->extension();
             $url = $foto->storeAs($destination, $filename);
             $this->foto = "app/" . $url;
-
         }
     }
 
