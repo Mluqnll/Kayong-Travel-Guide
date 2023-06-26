@@ -21,7 +21,7 @@ class WebTamanNasionalController extends Controller
         $data['detail'] = Detail::all();
         $data['list_taman'] = Taman::all();
         $data['list_taman'] = Taman::paginate(6);
-        return view('web.taman.taman',$data);
+        return view('web.taman',$data);
     }
 
     /**
@@ -43,12 +43,9 @@ class WebTamanNasionalController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show( $taman)
+    public function show( )
     {
-        $data['taman'] = Taman::find($taman);
-        $data['list_kategori_fasilitas'] = KategoriFasilitas::all();
-        $data['list_kategori'] = Kategori::all();
-        return view('web.taman.detail_taman', $data);
+        //
     }
 
     /**
