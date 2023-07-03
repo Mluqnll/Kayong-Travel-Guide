@@ -58,8 +58,7 @@
                                 <div class="post-img">
                                     <div class="blog-grid-slider slick">
                                         <div class="item">
-                                            <a class="image-popup-no-margins"
-                                                href="{{ url("public/$taman->foto") }}">
+                                            <a class="image-popup-no-margins" href="{{ url("public/$taman->foto") }}">
                                                 <img class="img-responsive"
                                                     style="width:100% ; height:300px; object-fit: cover"
                                                     src="{{ url("public/$taman->foto") }}"
@@ -67,8 +66,7 @@
                                             </a>
                                         </div>
                                         <div class="item">
-                                            <a class="image-popup-no-margins"
-                                                href="{{ url("public/$taman->foto1") }}">
+                                            <a class="image-popup-no-margins" href="{{ url("public/$taman->foto1") }}">
                                                 <img class="img-responsive"
                                                     style="width:100% ; height:300px; object-fit: cover"
                                                     src="{{ url("public/$taman->foto1") }}"
@@ -76,8 +74,7 @@
                                             </a>
                                         </div>
                                         <div class="item">
-                                            <a class="image-popup-no-margins"
-                                                href="{{ url("public/$taman->foto2") }}">
+                                            <a class="image-popup-no-margins" href="{{ url("public/$taman->foto2") }}">
                                                 <img class="img-responsive"
                                                     style="width:100% ; height:300px; object-fit: cover"
                                                     src="{{ url("public/$taman->foto2") }}"
@@ -86,7 +83,8 @@
                                         </div>
                                     </div>
                                     <div class="post-text">
-                                        <h3><a data-toggle="modal" data-target="#exampleModalCenter{{$taman->id}}">{{ $taman->nama }}</a>
+                                        <h3><a data-toggle="modal"
+                                                data-target="#exampleModalCenter{{ $taman->id }}">{{ $taman->nama }}</a>
                                         </h3>
                                     </div>
                                 </div>
@@ -120,35 +118,37 @@
 </x-web>
 
 @foreach ($list_taman as $taman)
-
-<div class="modal fade" id="exampleModalCenter{{$taman->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenter{{$taman->id}}" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 class="modal-title">{{$taman->nama}}</h2>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="post-img">
+    <div class="modal fade" id="exampleModalCenter{{ $taman->id }}" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenter{{ $taman->id }}" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header"><div class="post-img">
                     <div class="blog-grid-slider slick">
-                        <div class="item"><img class="img-responsive" src="{{url("public/$taman->foto")}}" alt=""/></div>
-                        <div class="item"><img class="img-responsive" src="{{url("public/$taman->foto1")}}" alt=""/></div>
-                        <div class="item"><img class="img-responsive" src="{{url("public/$taman->foto2")}}" alt=""/></div>
-                      </div>
+                        <div class="item"><img class="img-responsive" src="{{ url("public/$taman->foto") }}"
+                                alt="" /></div>
+                        <div class="item"><img class="img-responsive" src="{{ url("public/$taman->foto1") }}"
+                                alt="" /></div>
+                        <div class="item"><img class="img-responsive" src="{{ url("public/$taman->foto2") }}"
+                                alt="" /></div>
+                    </div>
 
                 </div>
-                <div class="post-text">
-                    <p>{{ $taman->alamat }}</p>
-                    <p>
-                        {!! nl2br($taman->deskripsi) !!}
-                    </p>
-
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-            </div>
+                <div class="modal-body">
+
+                    <div class="post-text">
+                        <span>{{ $taman->alamat }}</span>
+                        <p>
+                            {!! nl2br($taman->deskripsi) !!}
+                        </p>
+
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
+    </div>
 @endforeach
