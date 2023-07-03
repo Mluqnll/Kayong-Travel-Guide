@@ -51,8 +51,8 @@
                 <div class="col-md-3 col-sm-4 col-xs-12">
                     <div class="sidebar_widget widget_archive ">
                         <h5 class="aside-title">Informasi</h5>
-                        <ul>
-                            <li><a style="color: black">Alamat</a> : <span>{{ $atraksi_wisata->alamat }}</span></li>
+                        <ul >
+                            <li><a style="color: black">Alamat</a> : {{ $atraksi_wisata->alamat }}</li>
                             <li><a style="color: black">Destinasi Wisata</a> :
                                 <span>{{ $atraksi_wisata->atraksi }}</span>
                             </li>

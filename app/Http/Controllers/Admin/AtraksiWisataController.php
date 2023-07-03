@@ -38,7 +38,7 @@ class AtraksiWisataController extends Controller
         $atraksi_wisata->lat = request('lat');
         $atraksi_wisata->lng = request('lng');
         $atraksi_wisata->sumber_foto = request('sumber_foto');
-        $atraksi_wisata->handleUploadPoto();
+        $atraksi_wisata->handleUploadFoto();
         $atraksi_wisata->save();
 
         return redirect('admin/atraksi-wisata')->with('success', 'Data Berhasil Disimpan');
@@ -76,7 +76,7 @@ class AtraksiWisataController extends Controller
         $atraksi_wisata->lat = request('lat');
         $atraksi_wisata->lng = request('lng');
         $atraksi_wisata->sumber_foto = request('sumber_foto');
-        $atraksi_wisata->handleUploadPoto();
+        $atraksi_wisata->handleUploadFoto();
         $atraksi_wisata->save();
 
         $id_kategori = request('id_kategori');
