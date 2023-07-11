@@ -24,7 +24,7 @@
                         <div class="hero-text-wrap">
                             <center>
                                 <h3 style="color: white; font-weight:10px; margin-top:30vh"></h3>
-                                <img src="{{ url('public/web') }}/assets/images/tiga.png"
+                                <img src="{{ url('public/web') }}/assets/images/kku-white.pn"
                                     style="width:70%; height:auto; object-fit: cover;" alt="">
                             </center>
                         </div>
