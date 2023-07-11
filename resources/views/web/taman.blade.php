@@ -83,7 +83,7 @@
                                         </div>
                                     </div>
                                     <div class="post-text">
-                                        <h3><a data-toggle="modal"
+                                        <h3><a href="" data-toggle="modal"
                                                 data-target="#exampleModalCenter{{ $taman->id }}">{{ $taman->nama }}</a>
                                         </h3>
                                     </div>
@@ -121,21 +121,27 @@
     <div class="modal fade" id="exampleModalCenter{{ $taman->id }}" tabindex="-1" role="dialog"
         aria-labelledby="exampleModalCenter{{ $taman->id }}" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
+
             <div class="modal-content">
-                <div class="modal-header"><div class="post-img">
-                    <div class="blog-grid-slider slick">
-                        <div class="item"><img class="img-responsive" src="{{ url("public/$taman->foto") }}"
-                                alt="" /></div>
-                        <div class="item"><img class="img-responsive" src="{{ url("public/$taman->foto1") }}"
-                                alt="" /></div>
-                        <div class="item"><img class="img-responsive" src="{{ url("public/$taman->foto2") }}"
-                                alt="" /></div>
+                <div class="modal-header">
+                    <button class="btn btn-info float-right" data-dismiss="modal" aria-label="Close">
+                        <span class="tr-icon ion-android-close"></span>
+                    </button>
+                </div>
+                <div class="modal-header">
+
+                    <div class="post-img">
+                        <div class="blog-grid-slider slick">
+                            <div class="item"><img class="img-responsive" src="{{ url("public/$taman->foto") }}"
+                                    alt="" /></div>
+                            <div class="item"><img class="img-responsive" src="{{ url("public/$taman->foto1") }}"
+                                    alt="" /></div>
+                            <div class="item"><img class="img-responsive" src="{{ url("public/$taman->foto2") }}"
+                                    alt="" /></div>
+                        </div>
+
                     </div>
 
-                </div>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
                 </div>
                 <div class="modal-body">
 
