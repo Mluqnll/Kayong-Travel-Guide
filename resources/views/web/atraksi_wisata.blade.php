@@ -26,7 +26,7 @@
                                 <h3 style="color: white; font-weight:10px; margin-top:30vh"></h3>
                                 {{-- <img src="{{ url('public/web') }}/assets/images/logo-putih.png" alt=""
                                     style="width:50%; height:auto; object-fit: cover; "> --}}
-                                <img src="{{ url('public/web') }}/assets/images/tiga.png"
+                                <img src="{{ url('public/web') }}/assets/images/kku-white.pn"
                                     style="width:70%; height:auto; object-fit: cover;" alt="">
                             </center>
                         </div>
