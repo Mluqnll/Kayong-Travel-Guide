@@ -115,12 +115,12 @@
                                     {!! date('H:i', strtotime($atraksi_wisata->jam_tutup)) !!}</span>
                             </ul>
                         </div>
-                    </div>
-                    <h3 style="font-weight: 600;">{{ $atraksi_wisata->nama }}</h3>
-                    <div class="post-text text-left">
-                        <p style="text-align: justify">
-                            {{ $atraksi_wisata->deskripsi }}
-                        </p>
+                        <h3 style="font-weight: 600;">{{ $atraksi_wisata->nama }}</h3>
+                        <div class="post-text text-left">
+                            <p style="text-align: justify">
+                                {{ $atraksi_wisata->deskripsi }}
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
