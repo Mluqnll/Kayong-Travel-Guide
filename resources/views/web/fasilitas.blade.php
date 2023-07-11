@@ -123,12 +123,12 @@
                             </li>
                             <p style="text-align: justify">{{ $fasilitas->fasilitas }}</p>
                         </ul>
-                    </div>
-                    <h3 style="font-weight: 600;">{{ $fasiltias->nama }}</h3>
-                    <div class="post-text text-left">
-                        <p style="text-align: justify">
-                            {{ $fasiltias->deskripsi }}
-                        </p>
+                        <h3 style="font-weight: 600;">{{ $fasiltias->nama }}</h3>
+                        <div class="post-text text-left">
+                            <p style="text-align: justify">
+                                {{ $fasiltias->deskripsi }}
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
