@@ -127,16 +127,10 @@
                     <button class="btn btn-info float-right" data-dismiss="modal" aria-label="Close">
                         <span class="tr-icon ion-android-close"></span>
                     </button>
-                </div>
-                <div class="modal-header">
 
                     <div class="post-img">
-                        <div class="blog-grid-slider slick">
+                        <div class="blog">
                             <div class="item"><img class="img-responsive" src="{{ url("public/$taman->foto") }}"
-                                    alt="" /></div>
-                            <div class="item"><img class="img-responsive" src="{{ url("public/$taman->foto1") }}"
-                                    alt="" /></div>
-                            <div class="item"><img class="img-responsive" src="{{ url("public/$taman->foto2") }}"
                                     alt="" /></div>
                         </div>
 

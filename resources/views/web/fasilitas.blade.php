@@ -25,7 +25,7 @@
                         <div class="hero-text-wrap">
                             <center>
                                 <h3 style="color: white; font-weight:10px; margin-top:30vh"></h3>
-                                <img src="{{ url('public/web') }}/assets/images/tiga.png"
+                                <img src="{{ url('public/web') }}/assets/images/kku-white.png"
                                     style="width:70%; height:auto; object-fit: cover;" alt="">
                             </center>
                         </div>
@@ -79,14 +79,15 @@
         <div class="modal-dialog modal-lg " role="document">
             <div class="modal-content">
                 <div class="modal-header">
+                    <button class="btn btn-info float-right" data-dismiss="modal" aria-label="Close">
+                        <span class="tr-icon ion-android-close"></span>
+                    </button>
+
                     <img class="img-responsive" src="{{ url("public/$fasiltias->foto") }}"
                         style="width: 100%; height: 50%; object-fit: cover" alt="" />
                     <p class="text-right">Sumber Foto :
                         <em>{{ $fasiltias->sumber_foto }}</em>
                     </p>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
                 </div>
                 <div class="modal-body">
                     <div class="sidebar_widget widget_archive ">
@@ -120,12 +121,12 @@
                             <p style="text-align: justify">{{ $fasilitas->fasilitas }}</p>
                         </ul>
                     </div>
-                </div>
-                <h3 style="font-weight: 600;">{{ $fasiltias->nama }}</h3>
-                <div class="post-text text-left">
-                    <p style="text-align: justify">
-                        {{ $fasiltias->deskripsi }}
-                    </p>
+                    <h3 style="font-weight: 600;">{{ $fasiltias->nama }}</h3>
+                    <div class="post-text text-left">
+                        <p style="text-align: justify">
+                            {{ $fasiltias->deskripsi }}
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>

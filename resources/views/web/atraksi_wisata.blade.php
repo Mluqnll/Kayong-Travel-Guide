@@ -26,7 +26,7 @@
                                 <h3 style="color: white; font-weight:10px; margin-top:30vh"></h3>
                                 {{-- <img src="{{ url('public/web') }}/assets/images/logo-putih.png" alt=""
                                     style="width:50%; height:auto; object-fit: cover; "> --}}
-                                <img src="{{ url('public/web') }}/assets/images/tiga.png"
+                                <img src="{{ url('public/web') }}/assets/images/kku-white.png"
                                     style="width:70%; height:auto; object-fit: cover;" alt="">
                             </center>
                         </div>
@@ -42,8 +42,7 @@
     <section class="white-bg" id="pricing">
         <div class="container">
             <div class="section-title wow fadeInUp text-center" data-wow-delay="0.1s">
-                <strong style="font-size: 20px; font-weight:bold; color:grey">{{ $kategori->nama }} Di Kabupaten
-                    Ketapang
+                <strong style="font-size: 20px; font-weight:bold; color:grey">{{ $kategori->nama }} Di Kabupaten Kayong Utara
                 </strong>
                 <hr class="center_line grey-bg">
             </div>
@@ -76,14 +75,14 @@
         <div class="modal-dialog modal-lg " role="document">
             <div class="modal-content">
                 <div class="modal-header">
+                    <button class="btn btn-info float-right" data-dismiss="modal" aria-label="Close">
+                        <span class="tr-icon ion-android-close"></span>
+                    </button>
                     <img class="img-responsive" src="{{ url("public/$atraksi_wisata->foto") }}"
                         style="width: 100%; height: 50%; object-fit: cover" alt="" />
                     <p class="text-right">Sumber Foto :
                         <em>{{ $atraksi_wisata->sumber_foto }}</em>
                     </p>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
                 </div>
                 <div class="modal-body">
                     <div class="sidebar_widget widget_archive ">
@@ -117,12 +116,12 @@
                             </ul>
                         </div>
                     </div>
-                </div>
-                <h3 style="font-weight: 600;">{{ $atraksi_wisata->nama }}</h3>
-                <div class="post-text text-left">
-                    <p style="text-align: justify">
-                        {{ $atraksi_wisata->deskripsi }}
-                    </p>
+                    <h3 style="font-weight: 600;">{{ $atraksi_wisata->nama }}</h3>
+                    <div class="post-text text-left">
+                        <p style="text-align: justify">
+                            {{ $atraksi_wisata->deskripsi }}
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
