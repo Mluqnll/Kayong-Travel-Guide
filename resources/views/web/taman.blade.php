@@ -122,20 +122,18 @@
         aria-labelledby="exampleModalCenter{{ $taman->id }}" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
-                <div class="modal-header"><div class="post-img">
-                    <div class="blog-grid-slider slick">
-                        <div class="item"><img class="img-responsive" src="{{ url("public/$taman->foto") }}"
-                                alt="" /></div>
-                        <div class="item"><img class="img-responsive" src="{{ url("public/$taman->foto1") }}"
-                                alt="" /></div>
-                        <div class="item"><img class="img-responsive" src="{{ url("public/$taman->foto2") }}"
-                                alt="" /></div>
+                <div class="modal-header">
+                    <div class="post-img">
+                        <div class="blog">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <div class="item"><img class="img-responsive" src="{{ url("public/$taman->foto") }}"
+                                    alt="" /></div>
+                        </div>
+
                     </div>
 
-                </div>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
                 </div>
                 <div class="modal-body">
 
