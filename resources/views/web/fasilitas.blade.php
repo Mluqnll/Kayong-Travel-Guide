@@ -1,5 +1,4 @@
 <x-web>
-
     @include('menu.menu')
 
     <div class="remove-padding transition-none" id="home">
@@ -59,7 +58,12 @@
                             <div class="post-text">
                                 <a href=""data-toggle="modal"
                                     data-target="#Fasilitas{{ $fasilitas->id }}">{{ $fasilitas->nama }}</a>
-                                    <p style="color: #f3dc0c"> {{$fasilitas->rating}}</p>
+
+                                <p style="color: #f3dc0c">
+                                    @for ($i = 1; $i <= $fasilitas->rating; $i++)
+                                        <i class="icofont-star"></i>
+                                    @endfor
+                                </p>
                             </div>
                             <div class="post-text">
                                 <p>{{ $fasilitas->alamat }}</p>
@@ -120,12 +124,12 @@
                             <p style="text-align: justify">{{ $fasilitas->fasilitas }}</p>
                         </ul>
                     </div>
-                </div>
-                <h3 style="font-weight: 600;">{{ $fasiltias->nama }}</h3>
-                <div class="post-text text-left">
-                    <p style="text-align: justify">
-                        {{ $fasiltias->deskripsi }}
-                    </p>
+                    <h3 style="font-weight: 600;">{{ $fasiltias->nama }}</h3>
+                    <div class="post-text text-left">
+                        <p style="text-align: justify">
+                            {{ $fasiltias->deskripsi }}
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>

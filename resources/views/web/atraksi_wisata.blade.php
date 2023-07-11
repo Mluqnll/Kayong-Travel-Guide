@@ -42,8 +42,7 @@
     <section class="white-bg" id="pricing">
         <div class="container">
             <div class="section-title wow fadeInUp text-center" data-wow-delay="0.1s">
-                <strong style="font-size: 20px; font-weight:bold; color:grey">{{ $kategori->nama }} Di Kabupaten
-                    Ketapang
+                <strong style="font-size: 20px; font-weight:bold; color:grey">{{ $kategori->nama }} Di Kabupaten Kayong Utara
                 </strong>
                 <hr class="center_line grey-bg">
             </div>
@@ -117,12 +116,12 @@
                             </ul>
                         </div>
                     </div>
-                </div>
-                <h3 style="font-weight: 600;">{{ $atraksi_wisata->nama }}</h3>
-                <div class="post-text text-left">
-                    <p style="text-align: justify">
-                        {{ $atraksi_wisata->deskripsi }}
-                    </p>
+                    <h3 style="font-weight: 600;">{{ $atraksi_wisata->nama }}</h3>
+                    <div class="post-text text-left">
+                        <p style="text-align: justify">
+                            {{ $atraksi_wisata->deskripsi }}
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
