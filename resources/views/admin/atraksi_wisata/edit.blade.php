@@ -5,7 +5,7 @@
                 <div class="card-header">
                     <x-layout.button.back-button url="admin/atraksi-wisata/{{$atraksi_wisata->id_kategori}}"/>
 
-                    <h3 class="text-center">Tambah Data Atraksi Wisata</h3>
+                    <h3 class="text-center">Edit Data Atraksi Wisata</h3>
                 </div>
                 <div class="card-body">
 
@@ -53,7 +53,7 @@
                         </div>
 
                         <div class="form-group row">
-                            
+
                             <label class="col-sm-2 col-form-label text-left"> Jam Buka</label>
                             <div class="col-sm-4">
                                 <input type="time" class="form-control" name="jam_buka" value="{{ $atraksi_wisata->jam_buka}}">
@@ -81,7 +81,7 @@
                                 <img src="{{ url("public/$atraksi_wisata->foto") }}" alt="" height="310"
                                             class="rounded">
                             </div>
-                            
+
                             <div class="col-sm-4">
                                 <input type="file" class="form-control" name="foto" value="{{ $atraksi_wisata->foto }}">
                             </div>
@@ -97,7 +97,7 @@
                                 <input type="text" class="form-control" name="lng" value="{{ $atraksi_wisata->lng }}">
                             </div>
                         </div>
-                        
+
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label text-left">Deskripsi</label>
                             <div class="col-sm-10">
@@ -107,7 +107,7 @@
                             </div>
                         </div>
 
-                        
+
                         <div class="form-group row mb-0">
                             <div class="col-sm-12">
                                 <button class="btn btn-primary float-right"><span class="fa fa-save"></span>
