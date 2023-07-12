@@ -26,16 +26,48 @@
         <div class="container">
 
             <div class="row">
-                <div class="col-md-10 centerize-col text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="section-title">
-                        <hr class="center_line dark-bg">
-                        @foreach ($detail as $detail)
-                            <p>
-                                {{ $detail->nama }}
-                            </p>
-                        @endforeach
+                <div class="row">
+                    <div class="col-md-8 centerize-col text-center mt-0">
+                        <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+                            <h2 class="raleway-font"><span class="font-100">Berita Terkini</span></h2>
+                            <hr class="center_line dark-bg">
+                        </div>
                     </div>
                 </div>
+                <div class="row mt-10 mb-100">
+                    @foreach ($list_berita as $berita)
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="team-member">
+                                <div class="team-thumb">
+                                    <div class="thumb-overlay"></div>
+                                    <img style="width: 90;" src="{{ url("public/$berita->poto") }}" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-9 col-sm-6 col-xs-12">
+                            <div class="member-info text-left white-bg">
+                                <h4>{{ $berita->judul }}</h4>
+                                <p>
+                                    {{substr($berita->deskripsi,0,200)}} 
+                                </p>
+                                
+                                <div class="social-icons-style-02">
+                                    <ul class="sm-icon mt-20 mb-0">
+                                        <li> <a href="" data-toggle="modal"
+                                            data-target="#berita{{ $berita->id }}">
+                                                <i class="icofont icofont-info"></i>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                                
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+                
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.812596785114!2d109.98644231405744!3d-1.8168321369457205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e0518e6aef713bf%3A0xe05ee65e3627ba6c!2sPoliteknik%20Negeri%20Ketapang!5e0!3m2!1sid!2sid!4v1671195827915!5m2!1sid!2sid"
                     width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
@@ -90,4 +122,35 @@
         </div>
     </section>
 
+
+    
 </x-web>
+@foreach ($list_berita as $berita)
+    <div class="modal fade" id="berita{{ $berita->id }}" tabindex="-1" role="dialog"
+        aria-labelledby="berita{{ $berita->id }}" aria-hidden="true">
+        <div class="modal-dialog modal-lg " role="document">
+            <div class="modal-content">
+                <button type="button" class="btn btn-warning btn-xl" data-dismiss="modal" aria-label="Close">
+                    <span class="icofont-close">Close</span>
+                </button>
+                <div class="modal-header">
+                    <img class="img-responsive" src="{{ url("public/$berita->poto") }}"
+                        style="width: 100%; height: 50%; object-fit: cover" alt="" />
+                    
+                    
+                </div>
+                <div class="modal-body">
+                    <div class="sidebar_widget widget_archive ">
+                       
+                        <h3 style="font-weight: 600;">{{ $berita->judul }}</h3>
+                        <div class="post-text text-left">
+                            <p style="text-align: justify">
+                                {{ $berita->deskripsi }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+@endforeach
