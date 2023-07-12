@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\PengelolaController;
 use App\Http\Controllers\Admin\DesaWisataController;
 use App\Http\Controllers\Admin\AtraksiWisataController;
+use App\Http\Controllers\Admin\BeritaController;
 use App\Http\Controllers\Admin\KalenderWisataController;
 use App\Http\Controllers\Admin\KontakController;
 use App\Http\Controllers\Admin\KategoriController;
@@ -63,7 +64,11 @@ Route::prefix('admin')->middleware('auth')->group(function(){
     Route::get('fasilitas/create/{kategori_fasilitas}', [FasilitasController::class, 'create']);
     Route::get('fasilitas/show-fasilitas/{fasilitas}', [FasilitasController::class, 'detail']);
 
+
+    Route::resource('berita', BeritaController::class);
+
 });
+
 Route::post('store-galeri', [DesaWisataController::class, 'storeGaleri']);
 Route::get('delete-galeri/{galeri}', [DesaWisataController::class, 'deleteGaleri']);
 Route::post('store-bulan', [KalenderWisataController::class, 'storeBulan']);
