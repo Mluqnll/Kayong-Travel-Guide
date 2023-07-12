@@ -42,7 +42,8 @@
     <section class="white-bg" id="pricing">
         <div class="container">
             <div class="section-title wow fadeInUp text-center" data-wow-delay="0.1s">
-                <strong style="font-size: 20px; font-weight:bold; color:grey">{{ $kategori->nama }} Di Kabupaten Kayong Utara
+                <strong style="font-size: 20px; font-weight:bold; color:grey">{{ $kategori->nama }} Di Kabupaten Kayong
+                    Utara
                 </strong>
                 <hr class="center_line grey-bg">
             </div>
@@ -87,7 +88,7 @@
                 <div class="modal-body">
                     <div class="sidebar_widget widget_archive ">
                         <h5 class="aside-title">Informasi</h5>
-                        <div class="col-md-6">
+                        <div class="col-md-9">
                             <ul>
                                 <li><a style="color: black">Alamat</a> :
                                 </li>
@@ -96,31 +97,33 @@
                                 </li>
                                 <li><a style="color: black">Aktivitas</a> :
                                 </li>
-                                <span>{{ $atraksi_wisata->atraksi }}</span>
+                                <span>{{ $atraksi_wisata->destinasi }}</span>
                                 <li><a style="color: black">Pengelola</a> :
                                 </li>
                                 <span>{{ $atraksi_wisata->nama_pengelola }}</span>
                             </ul>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-3">
                             <ul>
                                 <li><a style="color: black">Nara Hubung</a> :
                                 </li>
                                 <span>{{ $atraksi_wisata->no_pengelola }}</span>
                                 <li><a style="color: black">Hari Buka</a> :
                                 </li>
-                                <span>{{ $atraksi_wisata->hari_buka }}
+                                <span>{{ $atraksi_wisata->hari_buka }}</span>
                                 <li><a style="color: black">Jam Buka</a> : </li>
-                                <span>{!! date('H:i', strtotime($atraksi_wisata->jam_buka)) !!} - </span>
-                                    {!! date('H:i', strtotime($atraksi_wisata->jam_tutup)) !!}</span>
+                                <span>{!! date('H:i', strtotime($atraksi_wisata->jam_buka)) !!} -
+                                {!! date('H:i', strtotime($atraksi_wisata->jam_tutup)) !!}
+                                </span>
                             </ul>
                         </div>
-                        <h3 style="font-weight: 600;">{{ $atraksi_wisata->nama }}</h3>
-                        <div class="post-text text-left">
-                            <p style="text-align: justify">
-                                {{ $atraksi_wisata->deskripsi }}
-                            </p>
-                        </div>
+                    </div>
+
+                    <h3 style="font-weight: 600;">{{ $atraksi_wisata->nama }}</h3>
+                    <div class="post-text">
+                        <p style="text-align: justify">
+                            {{ $atraksi_wisata->deskripsi }}
+                        </p>
                     </div>
                 </div>
             </div>
