@@ -94,8 +94,8 @@
                     
                 </div>
                 <div class="modal-body">
+                    <h2 style="font-weight: 600;">{{ $fasiltias->nama }}</h2>
                     <div class="sidebar_widget widget_archive ">
-                        
                         <a class="btn btn-md btn-dark btn-square mt-5 mb-30"
                             href="{{ url("$fasilitas->link") }}">Pemesanan tempat</a><br>
                         <ul>
@@ -124,7 +124,7 @@
                             </li>
                             <p style="text-align: justify">{{ $fasilitas->fasilitas }}</p>
                         </ul>
-                        <h3 style="font-weight: 600;">{{ $fasiltias->nama }}</h3>
+                        
                         <div class="post-text text-left">
                             <p style="text-align: justify">
                                 {{ $fasiltias->deskripsi }}
