@@ -75,20 +75,28 @@
         aria-labelledby="Atraksi{{ $atraksi_wisata->id }}" aria-hidden="true">
         <div class="modal-dialog modal-lg " role="document">
             <div class="modal-content">
+                <button type="button" class="btn btn-warning btn-xl" data-dismiss="modal" aria-label="Close">
+                    <span class="icofont-close">Close</span>
+                </button>
                 <div class="modal-header">
                     <img class="img-responsive" src="{{ url("public/$atraksi_wisata->foto") }}"
                         style="width: 100%; height: 50%; object-fit: cover" alt="" />
                     <p class="text-right">Sumber Foto :
                         <em>{{ $atraksi_wisata->sumber_foto }}</em>
                     </p>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+
                 </div>
                 <div class="modal-body">
+
                     <div class="sidebar_widget widget_archive ">
                         <h5 class="aside-title">Informasi</h5>
                         <div class="col-md-9">
+
+                    <div class="sidebar_widget widget_archive">
+                        <h2 class="title">{{ $atraksi_wisata->nama }}</h2>
+                        <div class="row">
+                        <div class="col-md-6 mt-10">
+
                             <ul>
                                 <li><a style="color: black">Alamat</a> :
                                 </li>
@@ -110,6 +118,7 @@
                                 <span>{{ $atraksi_wisata->no_pengelola }}</span>
                                 <li><a style="color: black">Hari Buka</a> :
                                 </li>
+
                                 <span>{{ $atraksi_wisata->hari_buka }}</span>
                                 <li><a style="color: black">Jam Buka</a> : </li>
                                 <span>{!! date('H:i', strtotime($atraksi_wisata->jam_buka)) !!} -
@@ -124,6 +133,23 @@
                         <p style="text-align: justify">
                             {{ $atraksi_wisata->deskripsi }}
                         </p>
+
+                                <span>{{ $atraksi_wisata->hari_buka }}
+                                    <li><a style="color: black">Jam Buka</a> : </li>
+                                    <span>{!! date('H:i', strtotime($atraksi_wisata->jam_buka)) !!} - </span>
+                                    {!! date('H:i', strtotime($atraksi_wisata->jam_tutup)) !!}
+                                </span>
+                            </ul>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="">
+                                <p style="">
+                                    {{ $atraksi_wisata->deskripsi }}
+                                </p>
+                            </div>
+                        </div>
+                        </div>
+
                     </div>
                 </div>
             </div>

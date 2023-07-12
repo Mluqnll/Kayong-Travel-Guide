@@ -82,20 +82,21 @@
         aria-labelledby="Fasilitas{{ $fasiltias->id }}" aria-hidden="true">
         <div class="modal-dialog modal-lg " role="document">
             <div class="modal-content">
+                <button type="button" class="btn btn-warning btn-xl" data-dismiss="modal" aria-label="Close">
+                    <span class="icofont-close">Close</span>
+                </button>
                 <div class="modal-header">
                     <img class="img-responsive" src="{{ url("public/$fasiltias->foto") }}"
                         style="width: 100%; height: 50%; object-fit: cover" alt="" />
                     <p class="text-right">Sumber Foto :
                         <em>{{ $fasiltias->sumber_foto }}</em>
                     </p>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                    
                 </div>
                 <div class="modal-body">
                     <div class="sidebar_widget widget_archive ">
-                        <h5 class="aside-title">Informasi</h5>
-                        <a class="btn btn-md btn-dark-outline btn-square mt-10"
+                        
+                        <a class="btn btn-md btn-dark btn-square mt-5 mb-30"
                             href="{{ url("$fasilitas->link") }}">Pemesanan tempat</a><br>
                         <ul>
                             <li><a style="color: black">Alamat</a> :

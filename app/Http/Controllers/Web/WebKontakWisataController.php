@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
+use App\Models\Berita;
 use App\Models\Detail;
 use App\Models\KategoriFasilitas;
 use App\Models\KontakWisata;
@@ -17,6 +18,7 @@ class WebKontakWisataController extends Controller
         $data['list_kategori_fasilitas'] = KategoriFasilitas::all();
         $data['detail'] = Detail::all();
         $data['list_kontak_wisata'] = KontakWisata::all();
+        $data['list_berita'] = Berita::all();
         return view('web.kontak_wisata', $data);
     }
 
