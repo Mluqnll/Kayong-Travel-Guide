@@ -86,16 +86,23 @@
                     <span class="icofont-close">Close</span>
                 </button>
                 <div class="modal-header">
-                    <img class="img-responsive" src="{{ url("public/$fasiltias->foto") }}"
-                        style="width: 100%; height: 50%; object-fit: cover" alt="" />
+                    <div class="blog-grid-slider slick">
+                        <div class="item"><img class="img-responsive" src="{{ url("public/$fasiltias->foto") }}"
+                                alt="" /></div>
+                        <div class="item"><img class="img-responsive" src="{{ url("public/$fasiltias->foto1") }}"
+                                alt="" /></div>
+                        <div class="item"><img class="img-responsive" src="{{ url("public/$fasiltias->foto2") }}"
+                                alt="" /></div>
+                    </div>
+
                     <p class="text-right">Sumber Foto :
                         <em>{{ $fasiltias->sumber_foto }}</em>
                     </p>
-                    
+
                 </div>
                 <div class="modal-body">
                     <div class="sidebar_widget widget_archive ">
-                        
+
                         <a class="btn btn-md btn-dark btn-square mt-5 mb-30"
                             href="{{ url("$fasilitas->link") }}">Pemesanan tempat</a><br>
                         <ul>

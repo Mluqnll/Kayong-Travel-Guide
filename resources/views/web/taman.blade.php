@@ -128,21 +128,54 @@
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
-                            <div class="item"><img class="img-responsive" src="{{ url("public/$taman->foto") }}"
-                                    alt="" /></div>
+                            <div class="item">
+                                <img class="img-responsive" src="{{ url("public/$taman->foto") }}" alt="" />
+                            </div>
+                            <p class="text-right">Sumber Foto :
+                                <em>{{ $taman->sumber_foto }}</em>
+                            </p>
                         </div>
 
                     </div>
 
                 </div>
                 <div class="modal-body">
+                    <div class="sidebar_widget widget_archive ">
 
-                    <div class="post-text">
-                        <span>{{ $taman->alamat }}</span>
-                        <p>
-                            {!! nl2br($taman->deskripsi) !!}
-                        </p>
-
+                        <a class="btn btn-md btn-dark btn-square mt-5 mb-30" href="{{ url("$taman->link") }}">Info
+                            Lengkap</a><br>
+                        <ul>
+                            <li><a style="color: black">Alamat</a> :
+                            </li>
+                            <span>{{ $taman->alamat }}</span>
+                            <li>
+                            </li>
+                            <li><a style="color: black">Pengelola</a> :
+                            </li>
+                            <span>{{ $taman->nama_pengelola }}</span>
+                            <li><a style="color: black">Nara Hubung</a> :
+                            </li>
+                            <span>{{ $taman->no_pengelola }}</span>
+                        </ul>
+                        <ul>
+                            <li><a style="color: black">Hari Buka</a> :
+                            </li>
+                            <span>{{ $taman->hari_buka }}</span>
+                            <li><a style="color: black">Jam Buka</a> :
+                            </li>
+                            <span>{!! date('H:i', strtotime($taman->jam_buka)) !!} -
+                                {!! date('H:i', strtotime($taman->jam_tutup)) !!}
+                            </span>
+                            <li><a style="color: black">Fasilitas</a> :
+                            </li>
+                            <p style="text-align: justify">{{ $taman->fasilitas }}</p>
+                        </ul>
+                        <h3 style="font-weight: 600;">{{ $taman->nama }}</h3>
+                        <div class="post-text text-left">
+                            <p style="text-align: justify">
+                                {{ $taman->deskripsi }}
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
