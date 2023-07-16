@@ -34,6 +34,12 @@ class TamanNasionalController extends Controller
         $taman->nama = request('nama');
         $taman->deskripsi = request('deskripsi');
         $taman->alamat = request('alamat');
+        $taman->nama_pengelola = request('nama_pengelola');
+        $taman->no_pengelola = request('no_pengelola');
+        $taman->link = request('link');
+        $taman->hari_buka = request('hari_buka');
+        $taman->jam_buka = request('jam_buka');
+        $taman->jam_tutup = request('jam_tutup');
         $taman->sumber_foto = request('sumber_foto');
         $taman->lat = request('lat');
         $taman->lng = request('lng');
@@ -73,13 +79,22 @@ class TamanNasionalController extends Controller
         $taman = Taman::find($taman);
         $taman->nama = request('nama');
         $taman->deskripsi = request('deskripsi');
+        $taman->nama_pengelola = request('nama_pengelola');
+        $taman->no_pengelola = request('no_pengelola');
+        $taman->hari_buka = request('hari_buka');
+        $taman->link = request('link');
+        $taman->jam_buka = request('jam_buka');
+        $taman->jam_tutup = request('jam_tutup');
         $taman->alamat = request('alamat');
         $taman->sumber_foto = request('sumber_foto');
         $taman->lat = request('lat');
         $taman->lng = request('lng');
-        if (request('foto')) $taman->handleUploadFoto();
-        if (request('foto1')) $taman->handleUploadFoto1();
-        if (request('foto2')) $taman->handleUploadFoto2();
+        if (request('foto'))
+            $taman->handleUploadFoto();
+        if (request('foto1'))
+            $taman->handleUploadFoto1();
+        if (request('foto2'))
+            $taman->handleUploadFoto2();
         $taman->save();
 
         return redirect('admin/taman')->with('success', 'Data Berhasil Di Edit');
@@ -90,9 +105,9 @@ class TamanNasionalController extends Controller
      */
     public function destroy($taman)
     {
-       $taman = Taman::find($taman);
-       $taman->handleDelete();
-       $taman->delete();
+        $taman = Taman::find($taman);
+        $taman->handleDelete();
+        $taman->delete();
         return back()->with('danger', 'Data Berhasil di Hapus');
     }
 }

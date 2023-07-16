@@ -59,17 +59,17 @@
                             </div>
                             <label class="col-sm-2 col-form-label text-left"> Poto</label>
                             <div class="col-sm-4">
-                                <img src="{{ url("public/$desa_wisata->foto") }}" style="width: 50%" class="avatar-img rounded">
+                                <img src="{{ url("public/$desa_wisata->foto1") }}" style="width: 50%" class="avatar-img rounded">
                             </div>
                             <div class="col-sm-6">
-                                <input type="file" class="form-control" name="foto1" accept=".jpg, .png, .jpeg" value="{{ $desa_wisata->foto }}">
+                                <input type="file" class="form-control" name="foto1" accept=".jpg, .png, .jpeg" value="{{ $desa_wisata->foto1 }}">
                             </div>
                             <label class="col-sm-2 col-form-label text-left"> Poto</label>
                             <div class="col-sm-4">
-                                <img src="{{ url("public/$desa_wisata->foto") }}" style="width: 50%" class="avatar-img rounded">
+                                <img src="{{ url("public/$desa_wisata->foto2") }}" style="width: 50%" class="avatar-img rounded">
                             </div>
                             <div class="col-sm-6">
-                                <input type="file" class="form-control" name="foto2" accept=".jpg, .png, .jpeg" value="{{ $desa_wisata->foto }}">
+                                <input type="file" class="form-control" name="foto2" accept=".jpg, .png, .jpeg" value="{{ $desa_wisata->foto2 }}">
                             </div>
                         </div>
 

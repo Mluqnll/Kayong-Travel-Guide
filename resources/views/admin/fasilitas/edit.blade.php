@@ -78,14 +78,26 @@
                         </div>
 
                         <div class="form-group row">
-                            <label class="col-sm-2 col-form-label text-left"> Foto</label>
+                            <label class="col-sm-2 col-form-label text-left"> Poto</label>
                             <div class="col-sm-4">
-                                <img src="{{ url("public/$fasilitas->foto") }}" style="width : 100%;"
-                                            class="rounded">
+                                <img src="{{ url("public/$fasilitas->foto") }}" style="width: 50%" class="avatar-img rounded">
                             </div>
-
                             <div class="col-sm-6">
-                                <input type="file" class="form-control" name="foto" value="{{ $fasilitas->foto }}">
+                                <input type="file" class="form-control" name="foto" accept=".jpg, .png, .jpeg" value="{{ $fasilitas->foto }}">
+                            </div>
+                            <label class="col-sm-2 col-form-label text-left"> Poto</label>
+                            <div class="col-sm-4">
+                                <img src="{{ url("public/$fasilitas->foto1") }}" style="width: 50%" class="avatar-img rounded">
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="file" class="form-control" name="foto1" accept=".jpg, .png, .jpeg" value="{{ $fasilitas->foto1 }}">
+                            </div>
+                            <label class="col-sm-2 col-form-label text-left"> Poto</label>
+                            <div class="col-sm-4">
+                                <img src="{{ url("public/$fasilitas->foto2") }}" style="width: 50%" class="avatar-img rounded">
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="file" class="form-control" name="foto2" accept=".jpg, .png, .jpeg" value="{{ $fasilitas->foto2 }}">
                             </div>
                         </div>
 

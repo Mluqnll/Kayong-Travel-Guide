@@ -13,18 +13,29 @@
                         @method('PUT')
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label text-left">Nama Taman Nasional</label>
-                            <div class="col-sm-10">
+                            <div class="col-sm-4">
                                 <input type="text" class="form-control" name="nama" value="{{ $taman->nama }}"
                                     placeholder="Nama Taman Nasional">
                             </div>
+                            <label class="col-sm-2 col-form-label text-left">Link Taman</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" name="link" placeholder="Link Taman"
+                                    value="{{ $taman->link }}">
+                            </div>
                         </div>
 
+
+
                         <div class="form-group row">
-                            <label class="col-sm-2 col-form-label text-left">Deskripsi</label>
-                            <div class="col-sm-10">
-                                <div class="tinymce-wrap">
-                                    <textarea class="form-control mt-15" rows="3" name="deskripsi">{{ $taman->deskripsi }}</textarea>
-                                </div>
+                            <label class="col-sm-2 col-form-label text-left">Pengelola</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" name="nama_pengelola"
+                                    value="{{ $taman->nama_pengelola }}" placeholder="Pengeloa">
+                            </div>
+                            <label class="col-sm-2 col-form-label text-left"> Nara Hubung</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" name="no_pengelola"
+                                    value="{{ $taman->no_pengelola }}" placeholder="Nara Hubung">
                             </div>
                         </div>
 
@@ -36,8 +47,8 @@
                             </div>
                             <label class="col-sm-2 col-form-label text-left"> Sumber Foto</label>
                             <div class="col-sm-4">
-                                <input type="text" class="form-control" name="sumber_foto" value="{{ $taman->sumber_foto }}"
-                                    placeholder="Sumber Foto">
+                                <input type="text" class="form-control" name="sumber_foto"
+                                    value="{{ $taman->sumber_foto }}" placeholder="Sumber Foto">
                             </div>
                         </div>
 
@@ -54,7 +65,23 @@
                             </div>
                         </div>
 
-
+                        <div class="form-group row">
+                            <label class="col-sm-1 col-form-label text-left"> Hari Buka</label>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control" name="hari_buka" placeholder="Hari Buka"
+                                    value="{{ $taman->hari_buka }}">
+                            </div>
+                            <label class="col-sm-1 col-form-label text-left"> Jam Buka</label>
+                            <div class="col-sm-3">
+                                <input type="time" class="form-control" name="jam_buka" placeholder="Jam Buka"
+                                    value="{{ $taman->jam_buka }}">
+                            </div>
+                            <label class="col-sm-1 col-form-label text-left"> Jam Tutup</label>
+                            <div class="col-sm-3">
+                                <input type="time" class="form-control" name="jam_tutup"
+                                    placeholder="Jam Tutup"value="{{ $taman->jam_tutup }}">
+                            </div>
+                        </div>
 
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label text-left"> Poto</label>
@@ -90,6 +117,15 @@
                             </div>
                         </div>
 
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label text-left">Deskripsi</label>
+                            <div class="col-sm-10">
+                                <div class="tinymce-wrap">
+                                    <textarea class="form-control mt-15" rows="3" name="deskripsi">{{ $taman->deskripsi }}</textarea>
+                                </div>
+                            </div>
+                        </div>
                         <div class="form-group row mb-0">
                             <div class="col-sm-12">
                                 <button class="btn btn-primary float-right"><span class="fa fa-save"></span>
