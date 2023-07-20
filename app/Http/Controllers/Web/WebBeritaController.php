@@ -3,6 +3,9 @@
 namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
+use App\Models\Berita;
+use App\Models\Kategori;
+use App\Models\KategoriFasilitas;
 use Illuminate\Http\Request;
 
 class WebBeritaController extends Controller
@@ -12,7 +15,7 @@ class WebBeritaController extends Controller
      */
     public function index()
     {
-        //
+       //
     }
 
     /**
@@ -34,7 +37,7 @@ class WebBeritaController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(string $berita)
     {
         //
     }
