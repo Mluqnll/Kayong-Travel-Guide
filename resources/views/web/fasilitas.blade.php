@@ -93,6 +93,8 @@
                                 alt="" /></div>
                         <div class="item"><img class="img-responsive" src="{{ url("public/$fasilitas->foto2") }}"
                                 alt="" /></div>
+                        <div class="item"><img class="img-responsive" src="{{ url("public/$fasilitas->foto2") }}"
+                                alt="" /></div>z
                     </div>
 
                     <p class="text-right">Sumber Foto :
