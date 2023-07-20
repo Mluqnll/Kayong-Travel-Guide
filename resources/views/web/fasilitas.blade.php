@@ -77,9 +77,9 @@
     </section>
 </x-web>
 
-@foreach ($list_fasilitas as $fasiltias)
-    <div class="modal fade" id="Fasilitas{{ $fasiltias->id }}" tabindex="-1" role="dialog"
-        aria-labelledby="Fasilitas{{ $fasiltias->id }}" aria-hidden="true">
+@foreach ($list_fasilitas as $fasilitas)
+    <div class="modal fade" id="Fasilitas{{ $fasilitas->id }}" tabindex="-1" role="dialog"
+        aria-labelledby="Fasilitas{{ $fasilitas->id }}" aria-hidden="true">
         <div class="modal-dialog modal-lg " role="document">
             <div class="modal-content">
                 <button type="button" class="btn btn-warning btn-xl" data-dismiss="modal" aria-label="Close">
@@ -87,16 +87,16 @@
                 </button>
                 <div class="modal-header">
                     <div class="blog-grid-slider slick">
-                        <div class="item"><img class="img-responsive" src="{{ url("public/$fasiltias->foto") }}"
+                        <div class="item"><img class="img-responsive" src="{{ url("public/$fasilitas->foto") }}"
                                 alt="" /></div>
-                        <div class="item"><img class="img-responsive" src="{{ url("public/$fasiltias->foto1") }}"
+                        <div class="item"><img class="img-responsive" src="{{ url("public/$fasilitas->foto1") }}"
                                 alt="" /></div>
-                        <div class="item"><img class="img-responsive" src="{{ url("public/$fasiltias->foto2") }}"
+                        <div class="item"><img class="img-responsive" src="{{ url("public/$fasilitas->foto2") }}"
                                 alt="" /></div>
                     </div>
 
                     <p class="text-right">Sumber Foto :
-                        <em>{{ $fasiltias->sumber_foto }}</em>
+                        <em>{{ $fasilitas->sumber_foto }}</em>
                     </p>
 
                 </div>
@@ -131,10 +131,10 @@
                             </li>
                             <p style="text-align: justify">{{ $fasilitas->fasilitas }}</p>
                         </ul>
-                        <h3 style="font-weight: 600;">{{ $fasiltias->nama }}</h3>
+                        <h3 style="font-weight: 600;">{{ $fasilitas->nama }}</h3>
                         <div class="post-text text-left">
                             <p style="text-align: justify">
-                                {{ $fasiltias->deskripsi }}
+                                {{ $fasilitas->deskripsi }}
                             </p>
                         </div>
                     </div>
