@@ -23,4 +23,17 @@ class Berita extends Model
         }
     }
 
+    function handleDelete()
+    {
+        $poto = $this->poto;
+        if ($poto) {
+            $path = public_path($poto);
+            if (file_exists($path)) {
+                unlink($path);
+            }
+            return true;
+        }
+    }
+
+
 }

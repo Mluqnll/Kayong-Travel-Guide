@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\Admin\BeritaController;
 use App\Http\Controllers\Admin\TamanNasionalController;
+use App\Http\Controllers\Web\WebBeritaController;
 use App\Http\Controllers\Web\WebTamanNasionalController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
@@ -45,8 +47,6 @@ Route::prefix('admin')->middleware('auth')->group(function(){
 
     Route::resource('desa-wisata', DesaWisataController::class);
 
-
-
     Route::resource('atraksi-wisata', AtraksiWisataController::class);
     Route::get('atraksi-wisata/show-atraksi-wisata/{atraksi_wisata}', [AtraksiWisataController::class, 'detail']);
 
@@ -55,6 +55,8 @@ Route::prefix('admin')->middleware('auth')->group(function(){
     Route::resource('kontak', KontakController::class);
 
     Route::resource('kategori', KategoriController::class);
+
+    Route::resource('berita', BeritaController::class);
 
     Route::resource('detail', DetailController::class);
 
@@ -74,6 +76,7 @@ Route::resource('taman', WebTamanNasionalController::class);
 Route::resource('kontak-wisata', WebKontakWisataController::class);
 Route::resource('kalender-wisata', WebKalenderWisataController::class);
 Route::resource('peta-wisata', WebPetaWisataController::class);
+Route::get('berita/{berita}', [WebKontakWisataController::class, 'show']);
 
 Route::get('fasilitas/{kategori_fasilitas}',[WebFasilitasController::class,'index']);
 Route::get('fasilitas-wisata/{fasilitas}',[WebFasilitasController::class,'show']);
