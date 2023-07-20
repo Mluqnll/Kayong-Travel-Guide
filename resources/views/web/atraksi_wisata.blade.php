@@ -87,16 +87,9 @@
 
                 </div>
                 <div class="modal-body">
-
                     <div class="sidebar_widget widget_archive ">
                         <h5 class="aside-title">Informasi</h5>
-                        <div class="col-md-9">
-
-                    <div class="sidebar_widget widget_archive">
-                        <h2 class="title">{{ $atraksi_wisata->nama }}</h2>
-                        <div class="row">
-                        <div class="col-md-6 mt-10">
-
+                        <div class="col-md-6">
                             <ul>
                                 <li><a style="color: black">Alamat</a> :
                                 </li>
@@ -105,51 +98,31 @@
                                 </li>
                                 <li><a style="color: black">Aktivitas</a> :
                                 </li>
-                                <span>{{ $atraksi_wisata->destinasi }}</span>
+                                <span>{{ $atraksi_wisata->atraksi }}</span>
                                 <li><a style="color: black">Pengelola</a> :
                                 </li>
                                 <span>{{ $atraksi_wisata->nama_pengelola }}</span>
                             </ul>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-6">
                             <ul>
                                 <li><a style="color: black">Nara Hubung</a> :
                                 </li>
                                 <span>{{ $atraksi_wisata->no_pengelola }}</span>
                                 <li><a style="color: black">Hari Buka</a> :
                                 </li>
-
-                                <span>{{ $atraksi_wisata->hari_buka }}</span>
-                                <li><a style="color: black">Jam Buka</a> : </li>
-                                <span>{!! date('H:i', strtotime($atraksi_wisata->jam_buka)) !!} -
-                                {!! date('H:i', strtotime($atraksi_wisata->jam_tutup)) !!}
-                                </span>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <h3 style="font-weight: 600;">{{ $atraksi_wisata->nama }}</h3>
-                    <div class="post-text">
-                        <p style="text-align: justify">
-                            {{ $atraksi_wisata->deskripsi }}
-                        </p>
-
                                 <span>{{ $atraksi_wisata->hari_buka }}
-                                    <li><a style="color: black">Jam Buka</a> : </li>
-                                    <span>{!! date('H:i', strtotime($atraksi_wisata->jam_buka)) !!} - </span>
-                                    {!! date('H:i', strtotime($atraksi_wisata->jam_tutup)) !!}
-                                </span>
+                                <li><a style="color: black">Jam Buka</a> : </li>
+                                <span>{!! date('H:i', strtotime($atraksi_wisata->jam_buka)) !!} - </span>
+                                    {!! date('H:i', strtotime($atraksi_wisata->jam_tutup)) !!}</span>
                             </ul>
                         </div>
-                        <div class="col-md-12">
-                            <div class="">
-                                <p style="">
-                                    {{ $atraksi_wisata->deskripsi }}
-                                </p>
-                            </div>
+                        <h3 style="font-weight: 600;">{{ $atraksi_wisata->nama }}</h3>
+                        <div class="post-text text-left">
+                            <p style="text-align: justify">
+                                {{ $atraksi_wisata->deskripsi }}
+                            </p>
                         </div>
-                        </div>
-
                     </div>
                 </div>
             </div>
