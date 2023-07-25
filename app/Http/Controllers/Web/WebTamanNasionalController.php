@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Models\Kategori;
 use App\Models\KategoriFasilitas;
 use App\Models\Taman;
-use App\Models\Detail;
 use Illuminate\Http\Request;
 
 class WebTamanNasionalController extends Controller
@@ -18,7 +17,6 @@ class WebTamanNasionalController extends Controller
     {
         $data['list_kategori'] = Kategori::all();
         $data['list_kategori_fasilitas'] = KategoriFasilitas::all();
-        $data['detail'] = Detail::all();
         $data['list_taman'] = Taman::all();
         $data['list_taman'] = Taman::paginate(6);
         return view('web.taman',$data);

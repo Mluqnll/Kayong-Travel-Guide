@@ -27,6 +27,12 @@
             <div class="row">
                 <div class="col-md-10 centerize-col text-center wow fadeInUp" data-wow-delay="0.1s">
                     <div class="section-title">
+                        @foreach ($detail as $detail)
+                        <p>
+                            {{ $detail->nama }}
+                        </p>
+                        @endforeach
+                        <hr class="center_line dark-bg">
                         <p>
                             Silahkan KLIK pada nama desa wisata yang tersedia untuk menemukan beragam informasi paket
                             wisata dan fasilitas pendukung lainnya.
