@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
 use App\Models\DesaWisata;
+use App\Models\Detail;
 use App\Models\KategoriFasilitas;
 use Illuminate\Http\Request;
 use App\Models\Kategori;
@@ -15,6 +16,7 @@ class WebDesaWisataController extends Controller
     {
         $data['list_kategori'] = Kategori::all();
         $data['list_kategori_fasilitas'] = KategoriFasilitas::all();
+        $data['detail'] = Detail::all();
         $data['list_desa_wisata'] = DesaWisata::all();
         $data['list_desa_wisata'] = DesaWisata::paginate(6);
         return view('web.desa_wisata', $data);
