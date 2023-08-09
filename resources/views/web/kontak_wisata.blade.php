@@ -29,7 +29,7 @@
                 <div class="row">
                     <div class="col-md-8 centerize-col text-center mt-0">
                         <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
-                            <h2 class="raleway-font"><span class="font-100">Berita Terkini</span></h2>
+                            <h2 class="raleway-font"><span class="font-100">Informasi Wisata</span></h2>
                             <hr class="center_line dark-bg">
                         </div>
                     </div>
