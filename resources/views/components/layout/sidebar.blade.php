@@ -25,7 +25,7 @@
                 </ul>
             </li>
             <li>
-                <a href="javascript: void(0);"> <i data-feather="grid" class="align-self-center menu-icon"></i><span>Amenitas</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
+                <a href="javascript: void(0);"> <i data-feather="grid" class="align-self-center menu-icon"></i><span>Fasilitas</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
                 <ul class="nav-second-level" aria-expanded="false">
                     <x-layout.sidebar.menu-item url="admin/kategori-fasilitas" label="Kategori Fasilitas" icon="fa fa-list-alt" />
                     <x-layout.sidebar.menu-item url="admin/fasilitas" label="Fasilitas" icon="fa fa-hotel" />
