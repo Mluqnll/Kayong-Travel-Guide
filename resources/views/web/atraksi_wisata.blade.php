@@ -84,7 +84,6 @@
                     <p class="text-right">Sumber Foto :
                         <em>{{ $atraksi_wisata->sumber_foto }}</em>
                     </p>
-
                 </div>
                 <div class="modal-body">
                     <div class="sidebar_widget widget_archive ">
@@ -112,9 +111,10 @@
                                 <li><a style="color: black">Hari Buka</a> :
                                 </li>
                                 <span>{{ $atraksi_wisata->hari_buka }}
-                                <li><a style="color: black">Jam Buka</a> : </li>
-                                <span>{!! date('H:i', strtotime($atraksi_wisata->jam_buka)) !!} - </span>
-                                    {!! date('H:i', strtotime($atraksi_wisata->jam_tutup)) !!}</span>
+                                    <li><a style="color: black">Jam Buka</a> : </li>
+                                    <span>{!! date('H:i', strtotime($atraksi_wisata->jam_buka)) !!} - </span>
+                                    {!! date('H:i', strtotime($atraksi_wisata->jam_tutup)) !!}
+                                </span>
                             </ul>
                         </div>
                         <h3 style="font-weight: 600;">{{ $atraksi_wisata->nama }}</h3>

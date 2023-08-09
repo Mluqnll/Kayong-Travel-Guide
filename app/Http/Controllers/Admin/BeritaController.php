@@ -32,7 +32,7 @@ class BeritaController extends Controller
 
         $berita->save();
 
-        return redirect('admin/berita');
+        return redirect('admin/berita') ->with('primary', 'Data Berhasil Ditambahkan');
     }
 
 
@@ -60,7 +60,7 @@ class BeritaController extends Controller
 
         $berita->save();
 
-        return redirect('admin/berita');
+        return redirect('admin/berita')->with('primary', 'Data Berhasil Diedit');
     }
 
 
